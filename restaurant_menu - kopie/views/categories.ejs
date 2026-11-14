@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kategorie menu</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Kategorie menu</h1>
+
+    <ul>
+        <% for (const category of categories) { %>
+<li>
+    <a href="/categories/<%= category.id %>"><%= category.name %></a>
+</li>        <% } %>
+    </ul>
+    <a href="/admin/login">Přihlášení správce</a>
+</body>
+</html>

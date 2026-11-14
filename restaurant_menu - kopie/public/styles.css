@@ -1,0 +1,43 @@
+body {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    background: #faf6ed;
+    color: #29241f;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.15;
+}
+
+a {
+    color: #7b3524;
+}
+.dish-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.dish-list > li {
+    padding: 1rem;
+    border: 1px solid #dfd2bf;
+    border-radius: 0.75rem;
+    background: #fffdf8;
+}
+
+.dish-list h2 {
+    margin: 0;
+    line-height: 1.25;
+}
+
+.dish-list p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #7b3524;
+}

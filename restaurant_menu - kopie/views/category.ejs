@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= category.name %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="/categories">Zpět na kategorie</a>
+    <h1><%= category.name %></h1>
+
+    <% if (dishes.length === 0) { %>
+        <p>V této kategorii zatím nejsou žádná jídla.</p>
+    <% } %>
+
+    <ul class="dish-list">
+        <% for (const dish of dishes) { %>
+            <li>
+                <h2><%= dish.name %></h2>
+                <p><%= dish.description %></p>
+                <p><%= dish.price %> Kč</p>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

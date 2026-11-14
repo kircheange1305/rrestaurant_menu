@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Správa jídel</title>
+    <a href="/admin/dishes/new">Přidat jídlo</a>
+</head>
+<body>
+    <h1>Správa jídel</h1>
+
+    <ul>
+        <% for (const dish of dishes) { %>
+          <li>
+    <%= dish.name %> — <%= dish.price %> Kč
+    <a href="/admin/dishes/<%= dish.id %>/edit">Upravit</a>
+    <form method="post" action="/admin/dishes/<%= dish.id %>/delete"
+      onsubmit="return confirm('Opravdu chcete smazat toto jídlo?');">
+    <button type="submit">Smazat</button>
+</form>
+</li>
+        <% } %>
+        <form method="post" action="/admin/logout">
+    <button type="submit">Odhlásit se</button>
+</form>
+    </ul>
+</body>
+</html>
